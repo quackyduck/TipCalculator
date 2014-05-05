@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0ABF3F80191710DE0088FF01"
-               BuildableName = "TipCalculatorTests.xctest"
-               BlueprintName = "TipCalculatorTests"
-               ReferencedContainer = "container:TipCalculator.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
