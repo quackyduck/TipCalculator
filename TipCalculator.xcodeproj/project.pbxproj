@@ -23,10 +23,10 @@
 		0ABF3F9C191711900088FF01 /* NMTipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF3F9A191711900088FF01 /* NMTipViewController.xib */; };
 		0ABF3FA5191748A40088FF01 /* NMSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA3191748A40088FF01 /* NMSettingsTableViewController.m */; };
 		0ABF3FA6191748A40088FF01 /* NMSettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA4191748A40088FF01 /* NMSettingsTableViewController.xib */; };
-		0ABF3FAA19174B6C0088FF01 /* NMSettingsToggleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA819174B6C0088FF01 /* NMSettingsToggleTableViewCell.m */; };
-		0ABF3FAB19174B6C0088FF01 /* NMSettingsToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA919174B6C0088FF01 /* NMSettingsToggleTableViewCell.xib */; };
-		0AF10F60191A024C00D36277 /* NMDefaultPercentageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF10F5E191A024C00D36277 /* NMDefaultPercentageTableViewCell.m */; };
-		0AF10F61191A024C00D36277 /* NMDefaultPercentageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF10F5F191A024C00D36277 /* NMDefaultPercentageTableViewCell.xib */; };
+		0ABF3FAA19174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA819174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.m */; };
+		0ABF3FAB19174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF3FA919174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.xib */; };
+		0AF10F60191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF10F5E191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.m */; };
+		0AF10F61191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF10F5F191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +62,12 @@
 		0ABF3FA2191748A40088FF01 /* NMSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSettingsTableViewController.h; sourceTree = "<group>"; };
 		0ABF3FA3191748A40088FF01 /* NMSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSettingsTableViewController.m; sourceTree = "<group>"; };
 		0ABF3FA4191748A40088FF01 /* NMSettingsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMSettingsTableViewController.xib; sourceTree = "<group>"; };
-		0ABF3FA719174B6C0088FF01 /* NMSettingsToggleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSettingsToggleTableViewCell.h; sourceTree = "<group>"; };
-		0ABF3FA819174B6C0088FF01 /* NMSettingsToggleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSettingsToggleTableViewCell.m; sourceTree = "<group>"; };
-		0ABF3FA919174B6C0088FF01 /* NMSettingsToggleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMSettingsToggleTableViewCell.xib; sourceTree = "<group>"; };
-		0AF10F5D191A024C00D36277 /* NMDefaultPercentageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMDefaultPercentageTableViewCell.h; sourceTree = "<group>"; };
-		0AF10F5E191A024C00D36277 /* NMDefaultPercentageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMDefaultPercentageTableViewCell.m; sourceTree = "<group>"; };
-		0AF10F5F191A024C00D36277 /* NMDefaultPercentageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMDefaultPercentageTableViewCell.xib; sourceTree = "<group>"; };
+		0ABF3FA719174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSettingsUseLastTipPercentageTableViewCell.h; sourceTree = "<group>"; };
+		0ABF3FA819174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSettingsUseLastTipPercentageTableViewCell.m; sourceTree = "<group>"; };
+		0ABF3FA919174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMSettingsUseLastTipPercentageTableViewCell.xib; sourceTree = "<group>"; };
+		0AF10F5D191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMDefaultTipPercentageTableViewCell.h; sourceTree = "<group>"; };
+		0AF10F5E191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMDefaultTipPercentageTableViewCell.m; sourceTree = "<group>"; };
+		0AF10F5F191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NMDefaultTipPercentageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +137,12 @@
 				0ABF3FA2191748A40088FF01 /* NMSettingsTableViewController.h */,
 				0ABF3FA3191748A40088FF01 /* NMSettingsTableViewController.m */,
 				0ABF3FA4191748A40088FF01 /* NMSettingsTableViewController.xib */,
-				0ABF3FA719174B6C0088FF01 /* NMSettingsToggleTableViewCell.h */,
-				0ABF3FA819174B6C0088FF01 /* NMSettingsToggleTableViewCell.m */,
-				0ABF3FA919174B6C0088FF01 /* NMSettingsToggleTableViewCell.xib */,
-				0AF10F5D191A024C00D36277 /* NMDefaultPercentageTableViewCell.h */,
-				0AF10F5E191A024C00D36277 /* NMDefaultPercentageTableViewCell.m */,
-				0AF10F5F191A024C00D36277 /* NMDefaultPercentageTableViewCell.xib */,
+				0ABF3FA719174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.h */,
+				0ABF3FA819174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.m */,
+				0ABF3FA919174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.xib */,
+				0AF10F5D191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.h */,
+				0AF10F5E191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.m */,
+				0AF10F5F191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.xib */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABF3F74191710DE0088FF01 /* InfoPlist.strings in Resources */,
-				0ABF3FAB19174B6C0088FF01 /* NMSettingsToggleTableViewCell.xib in Resources */,
-				0AF10F61191A024C00D36277 /* NMDefaultPercentageTableViewCell.xib in Resources */,
+				0ABF3FAB19174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.xib in Resources */,
+				0AF10F61191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.xib in Resources */,
 				0ABF3F9C191711900088FF01 /* NMTipViewController.xib in Resources */,
 				0ABF3F7C191710DE0088FF01 /* Images.xcassets in Resources */,
 				0ABF3FA6191748A40088FF01 /* NMSettingsTableViewController.xib in Resources */,
@@ -277,9 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABF3F76191710DE0088FF01 /* main.m in Sources */,
-				0ABF3FAA19174B6C0088FF01 /* NMSettingsToggleTableViewCell.m in Sources */,
+				0ABF3FAA19174B6C0088FF01 /* NMSettingsUseLastTipPercentageTableViewCell.m in Sources */,
 				0ABF3FA5191748A40088FF01 /* NMSettingsTableViewController.m in Sources */,
-				0AF10F60191A024C00D36277 /* NMDefaultPercentageTableViewCell.m in Sources */,
+				0AF10F60191A024C00D36277 /* NMDefaultTipPercentageTableViewCell.m in Sources */,
 				0ABF3F7A191710DE0088FF01 /* NMAppDelegate.m in Sources */,
 				0ABF3F9B191711900088FF01 /* NMTipViewController.m in Sources */,
 			);

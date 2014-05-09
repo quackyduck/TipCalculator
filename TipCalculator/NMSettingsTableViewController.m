@@ -7,15 +7,15 @@
 //
 
 #import "NMSettingsTableViewController.h"
-#import "NMSettingsToggleTableViewCell.h"
-#import "NMDefaultPercentageTableViewCell.h"
+#import "NMSettingsUseLastTipPercentageTableViewCell.h"
+#import "NMDefaultTipPercentageTableViewCell.h"
 
 @interface NMSettingsTableViewController ()
 
-@property (strong, nonatomic) NMSettingsToggleTableViewCell *toggleTableViewCell;
-@property (strong, nonatomic) NMDefaultPercentageTableViewCell *defaultPercentageCell;
-@property NSInteger defaultPercentageIndex;
-@property BOOL defaultUseLastPercentage;
+@property (strong, nonatomic) NMSettingsUseLastTipPercentageTableViewCell *useLastTipPercentageCell;
+@property (strong, nonatomic) NMDefaultTipPercentageTableViewCell *defaultTipPercentageCell;
+@property NSInteger defaultTipPercentageIndex;
+@property BOOL useLastTipPercentage;
 
 @end
 
@@ -26,21 +26,30 @@
     [super viewDidLoad];
     self.title = @"Settings";
     
-    self.toggleTableViewCell = [self.tableView dequeueReusableCellWithIdentifier:@"lastUsedCell"];
-    if (!self.toggleTableViewCell) {
-        [self.tableView registerNib:[UINib nibWithNibName:@"NMSettingsToggleTableViewCell" bundle:nil] forCellReuseIdentifier:@"lastUsedCell"];
-        self.toggleTableViewCell = [self.tableView dequeueReusableCellWithIdentifier:@"lastUsedCell"];
-        [self.toggleTableViewCell.previousTipSwitch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    self.useLastTipPercentage = [userDefaults integerForKey:@"USE_LAST_TIP_PERCENTAGE"];
+    self.defaultTipPercentageIndex = [userDefaults integerForKey:@"DEFAULT_TIP_PERCENTAGE_INDEX"];
+    
+    self.useLastTipPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"lastUsedCell"];
+    if (!self.useLastTipPercentageCell) {
+        [self.tableView registerNib:[UINib nibWithNibName:@"NMSettingsUseLastTipPercentageTableViewCell" bundle:nil] forCellReuseIdentifier:@"useLastCell"];
+        self.useLastTipPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"useLastCell"];
+        [self.useLastTipPercentageCell.useLastTipPercentageSwitch addTarget:self action:@selector(switchValueChanged:) forControlEvents:UIControlEventValueChanged];
+        
+    }
+    self.useLastTipPercentageCell.useLastTipPercentageSwitch.on = self.useLastTipPercentage ? YES : NO;
+    
+    self.defaultTipPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"defaultTipPercentageCell"];
+    if (!self.defaultTipPercentageCell) {
+        [self.tableView registerNib:[UINib nibWithNibName:@"NMDefaultTipPercentageTableViewCell" bundle:nil] forCellReuseIdentifier:@"defaultTipPercentageCell"];
+        self.defaultTipPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"defaultTipPercentageCell"];
+        [self.defaultTipPercentageCell.defaultTipPercentageControl addTarget:self action:@selector(segmentControlValueChanged:) forControlEvents:UIControlEventValueChanged];
         
     }
     
-    self.defaultPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"defaultPercentageCell"];
-    if (!self.defaultPercentageCell) {
-        [self.tableView registerNib:[UINib nibWithNibName:@"NMDefaultPercentageTableViewCell" bundle:nil] forCellReuseIdentifier:@"defaultPercentageCell"];
-        self.defaultPercentageCell = [self.tableView dequeueReusableCellWithIdentifier:@"defaultPercentageCell"];
-        [self.defaultPercentageCell.defaultPercentageSegmentControl addTarget:self action:@selector(segmentControlValueChanged:) forControlEvents:UIControlEventValueChanged];
-        
-    }
+    [self.defaultTipPercentageCell.defaultTipPercentageControl setEnabled:!self.useLastTipPercentageCell.useLastTipPercentageSwitch.on];
+    [self.defaultTipPercentageCell.defaultTipPercentageControl setSelectedSegmentIndex:self.defaultTipPercentageIndex];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +62,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // One section of settings right now.
+    // Two sections.
     return 2;
 }
 
@@ -67,11 +76,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return self.toggleTableViewCell;
+        return self.useLastTipPercentageCell;
     }
     
     if (indexPath.section == 1) {
-        return self.defaultPercentageCell;
+        return self.defaultTipPercentageCell;
     }
     
     
@@ -102,18 +111,25 @@
     
     UISwitch *switchControl = (UISwitch *)sender;
     if (switchControl.on) {
-        NSLog(@"ON!");
-        self.defaultPercentageCell.defaultPercentageSegmentControl.enabled = NO;
-        self.defaultUseLastPercentage = YES;
+        self.defaultTipPercentageCell.defaultTipPercentageControl.enabled = NO;
+        self.useLastTipPercentage = YES;
     } else {
-        self.defaultPercentageCell.defaultPercentageSegmentControl.enabled = YES;
-        self.defaultUseLastPercentage = NO;
+        self.defaultTipPercentageCell.defaultTipPercentageControl.enabled = YES;
+        self.useLastTipPercentage = NO;
     }
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:self.useLastTipPercentage forKey:@"USE_LAST_TIP_PERCENTAGE"];
+    [userDefaults synchronize];
 }
 
 - (IBAction)segmentControlValueChanged:(id)sender {
     UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
-    self.defaultPercentageIndex = [segmentedControl selectedSegmentIndex];
+    self.defaultTipPercentageIndex = [segmentedControl selectedSegmentIndex];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:self.defaultTipPercentageIndex forKey:@"DEFAULT_TIP_PERCENTAGE_INDEX"];
+    [userDefaults synchronize];
+    
 }
 
 @end

@@ -7,8 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NMTipViewController">
             <connections>
                 <outlet property="billTextField" destination="iux-lP-xX7" id="ruP-Ea-6EX"/>
-                <outlet property="tipControl" destination="K3W-4y-4jN" id="Pha-rr-NB7"/>
                 <outlet property="tipLabel" destination="BGd-s5-u6M" id="Hmf-se-nGb"/>
+                <outlet property="tipSegmentedControl" destination="K3W-4y-4jN" id="v9w-sK-71j"/>
                 <outlet property="totalLabel" destination="puE-pk-dID" id="Km2-cE-Z5O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NMDefaultPercentageTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultPercentageSegmentControl;
+@interface NMDefaultTipPercentageTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipPercentageControl;
 
 @end

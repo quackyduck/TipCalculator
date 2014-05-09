@@ -1,18 +1,18 @@
 //
-//  NMSettingsToggleTableViewCell.m
+//  NMDefaultPercentageTableViewCell.m
 //  TipCalculator
 //
-//  Created by Nicolas Melo on 5/4/14.
+//  Created by Nicolas Melo on 5/6/14.
 //  Copyright (c) 2014 melo. All rights reserved.
 //
 
-#import "NMSettingsToggleTableViewCell.h"
+#import "NMDefaultTipPercentageTableViewCell.h"
 
-@interface NMSettingsToggleTableViewCell ()
+@interface NMDefaultTipPercentageTableViewCell()
 
 @end
 
-@implementation NMSettingsToggleTableViewCell
+@implementation NMDefaultTipPercentageTableViewCell
 
 - (void)awakeFromNib
 {
