@@ -7,6 +7,7 @@
 //
 
 #import "NMTipViewController.h"
+#import "NMSettingsTableViewController.h"
 
 @interface NMTipViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
@@ -16,6 +17,7 @@
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
 
 @end
 
@@ -34,6 +36,7 @@
 {
     [super viewDidLoad];
     [self updateValues];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +58,12 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)onSettingsButton {
+    
+    NMSettingsTableViewController *settingsViewController = [[NMSettingsTableViewController alloc] init];
+    [self.navigationController pushViewController:settingsViewController animated:YES];
 }
 
 @end
