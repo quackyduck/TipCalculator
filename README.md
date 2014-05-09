@@ -4,7 +4,6 @@ TipCalculator
 TipCalculator app for CodePath iOS Bootcamp.
 
 NOTES
-=====
 
 * Left the simple UI
 * Created Settings view based on static Tableview cells
